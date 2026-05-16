@@ -1,1 +1,1 @@
-const BASE_URL = "https://online-voting-application-production.up.railway.app";
+const BASE_URL = "https://votezysecure-production.up.railway.app";
