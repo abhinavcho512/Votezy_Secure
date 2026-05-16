@@ -1,0 +1,1 @@
+const BASE_URL = "https://online-voting-application-production.up.railway.app";
