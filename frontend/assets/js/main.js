@@ -32,7 +32,7 @@ function checkAuth() {
     }
 
     // ✅ ADMIN only pages - redirect USER away
-    const adminPages = ["voters.html", "candidates.html", "results.html"];
+   const adminPages = ["voters.html", "candidates.html", "results.html", "voters", "candidates", "results"];
     if (token && role === "ROLE_USER" && adminPages.includes(currentPage)) {
         Swal.fire("Access Denied", "This page is for admins only!", "error")
         .then(() => {
