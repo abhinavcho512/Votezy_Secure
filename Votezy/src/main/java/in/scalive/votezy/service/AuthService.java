@@ -33,10 +33,9 @@ public class AuthService {
         // Hash the password before saving
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
-        // Default role is ROLE_USER
-        if (user.getRole() == null || user.getRole().isBlank()) {
-            user.setRole("ROLE_USER");
-        }
+        // 
+        // ✅ Always force ROLE_USER - no one can self-assign ROLE_ADMIN
+          user.setRole("ROLE_USER");
 
         appUserRepository.save(user);
         return "User registered successfully!";
